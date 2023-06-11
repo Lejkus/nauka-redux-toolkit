@@ -1,5 +1,5 @@
 import { fetchCoctail } from './coctailSlice'
-import { deleteAll, deleteOne } from './coctailSlice'
+import { deleteAll } from './coctailSlice'
 import { useAppSelector, useAppDispatch } from './hooks'
 import CoctailComponent from './components/coctailComponent'
 
@@ -9,7 +9,7 @@ import LoadingButton from '@mui/lab/LoadingButton';
 function App() {
   const state = useAppSelector((state) => state.coctail)
   const dispatch = useAppDispatch()
-  {/* <button onClick={()=>{dispatch(deleteOne(coctail))}}>Delete</button> */ }
+
   return (
     <>
       {state.coctails ? state.coctails.map((coctail) => {
